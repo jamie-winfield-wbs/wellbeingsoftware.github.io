@@ -1,14 +1,13 @@
+
+	@import "abstracts/variables.scss";
 	@import "abstracts/functions.scss";
 	@import "abstracts/mixins.scss";
-	@import "abstracts/variables.scss";
 	@import "abstracts/animation.scss"; 
 	
 	@import "base/normalize.scss";
 	@import "base/reset.scss";
 	@import "base/global.scss";
 
-	@import "utilities/utilities.scss";
+	@import "components/app_header.scss";
 
-	h1 {
-		color: $orange; 
-	}
+	@import "utilities/utilities.scss";

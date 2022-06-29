@@ -180,7 +180,7 @@
     width: 100%;
     height: 100%;
     padding: 5px;
-    color: $darkblue;
+    color: $ws-primary-blue;
     border-radius: 3px;
     @include text-size-regular;
 }
@@ -240,7 +240,7 @@
         cursor: pointer;
         position: relative;
         display: inline-block;
-        background-color: $white;
+        background-color: $ws-white;
         border: 1px solid $darkblue;
         margin-right: 4px;
         height: 20px;
@@ -273,7 +273,7 @@
     width: 100%;
     height: 35px;   
     cursor: pointer;
-    color: $white;
+    color: $ws-white;
     transition: background-color .15s linear;
     background: $green;
     &:hover {

@@ -1,6 +1,6 @@
 /// Slightly lighten a color
 @function tint($color, $percentage) {
-    @return mix($white, $color, $percentage);
+    @return mix($ws-white, $color, $percentage);
 }
 
 /// Slightly darken a color

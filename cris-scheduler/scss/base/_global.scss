@@ -10,14 +10,14 @@ html {
 
 body {
     font-family: Roboto,"Segoe UI",Segoe,Arial,Helvetica,sans-serif;
-    color: $darkblue;
+    color: $ws-primary-blue;
     line-height: 1.5rem;
 }
 
 button,
 input,
 optgroup,
-select,
+select, 
 textarea {
     -ms-appearance: none;
     -webkit-appearance: none;
@@ -27,7 +27,7 @@ textarea {
     resize: none;
     padding: 0;
     border: 0;
-    background: $white;
+    background: $ws-white;
     &:focus {outline: 0;}
 }
 
