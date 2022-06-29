@@ -1,0 +1,33 @@
+// **IMPORTANT** - Unused utility classes need tree shaking so they are no included in any build files.
+
+
+[class*=u-show-],
+[class*=u-flex-],
+[class*=u-iblock-] {display: none;}
+
+@mixin responsive-classes($mq) {
+    
+    // display
+    .is-display-block {display: block;}
+    .u-flex#{$mq} {display: flex;}
+
+    // width
+    .width-100#{$mq} {width: 100%}
+
+    // text
+    .u-bold#{$mq} {font-weight: bold;}
+    .u-nowrap#{$mq} {white-space: nowrap;}
+
+    // interactive
+    .u-pointer-events-none#{$mq} {pointer-events: none;}
+    .u-pointer-events-auto#{$mq} {pointer-events: auto;}
+}
+
+@include responsive-classes(null);
+@include over($xxs) { @include responsive-classes('-xxs'); };
+@include over($xs) { @include responsive-classes('-xs'); };
+@include over($sm) { @include responsive-classes('-sm'); };
+@include over($md) { @include responsive-classes('-md'); };
+@include over($lg) { @include responsive-classes('-lg'); };
+@include over($xl) { @include responsive-classes('-xl'); };
+@include over($xxl) { @include responsive-classes('-xxl'); };

@@ -1,0 +1,54 @@
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: Roboto,"Segoe UI",Segoe,Arial,Helvetica,sans-serif;
+    color: $darkblue;
+    line-height: 1.5rem;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    resize: none;
+    padding: 0;
+    border: 0;
+    background: $white;
+    &:focus {outline: 0;}
+}
+
+// removes clock icon in chrome
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+}
+
+// removes arrows/spinners in Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// Removes arrows/spinners in Firefox
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// Removes dropdown arrow in IE11
+select::-ms-expand {
+    display: none;
+}

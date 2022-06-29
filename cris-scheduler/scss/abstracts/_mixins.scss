@@ -1,0 +1,308 @@
+// GENERAL MIXINS - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+// Clearfix
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Adds essential pseudo code
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// Box shadow
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+    @if $inset {
+      -webkit-box-shadow:inset $top $left $blur $spread $color;
+      -moz-box-shadow:inset $top $left $blur $spread $color;
+      box-shadow:inset $top $left $blur $spread $color;
+    } @else {
+      -webkit-box-shadow: $top $left $blur $spread $color;
+      -moz-box-shadow: $top $left $blur $spread $color;
+      box-shadow: $top $left $blur $spread $color;
+    }
+  }
+
+
+
+
+// CSS ANIMATION MIXINS - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($name-duration-timing-iteration) {
+  -webkit-animation: #{$name-duration-timing-iteration};
+  -moz-animation: #{$name-duration-timing-iteration};
+  -ms-animation: #{$name-duration-timing-iteration};
+  -o-animation: #{$name-duration-timing-iteration};
+  animation: #{$name-duration-timing-iteration};      
+}
+
+
+
+
+// RESPONSIVE MEDIA QUERY MIXINS - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+// Media query - width (min)
+@mixin over($min) {
+    @media only screen and (min-width:$min) {
+        @content;
+    }
+}
+
+// Media query - width (max)
+@mixin upto($max) {
+    @media only screen and (max-width:$max) {
+        @content;
+    }
+}
+
+// Media query - width (between min and max)
+@mixin between($min,$max) {
+    @media only screen and (min-width:$min) and (max-width:$max) {
+        @content;
+    }
+}
+
+// Media query - height (min)
+@mixin over-h($max) {
+    @media only screen and (min-height:$max) {
+        @content;
+    }
+}
+
+// Media query - height (max)
+@mixin upto-h($max) {
+    @media only screen and (max-height:$max) {
+        @content;
+    }
+}
+
+// Generates ALL responsive classes with suffixes 
+@mixin responsive($class) {
+    &#{$class} {
+        @content;
+    }
+    @media only screen and (min-width:$xxs) {
+        &#{$class}-xxs {
+            @content;
+        }
+    }
+    @media only screen and (min-width:$xs) {
+        &#{$class}-xs {
+            @content;
+        }
+    }
+    @media only screen and (min-width:$sm) {
+        &#{$class}-sm {
+            @content;
+        }
+    }
+    @media only screen and (min-width:$md) {
+        &#{$class}-md {
+            @content;
+        }
+    }
+    @media only screen and (min-width:$lg) {
+        &#{$class}-lg {
+            @content;
+        }
+    }
+    @media only screen and (min-width:$xl) {
+        &#{$class}-xl {
+            @content;
+        }
+    }
+    @media only screen and (min-width:$xxl) {
+        &#{$class}-xxl {
+            @content;
+        }
+    }
+}
+
+
+
+
+// CODE BASED MIXINS - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+// Font size for c-label, c-bar, c-dropdown
+@mixin text-size-regular {
+    font-size: 12px;
+    @include over($sm) {
+        font-size: 13px;
+    }
+}
+
+// Form control wrapper
+@mixin form-control-span {
+    position: relative;
+    display: inline-block;
+    border: 1px solid $darkblue;
+    border-radius: 3px;
+    width: 100%;
+    height: 35px;
+    transition: background-color .1s linear;
+    &:focus-within {
+        transition: all .15s linear;
+        box-shadow: 0 0 0 1px #578bc9;
+        border-color: #578bc9;
+    }
+}
+
+// Form elements (inside Form control wrappers)
+@mixin form-control-element {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    color: $darkblue;
+    border-radius: 3px;
+    @include text-size-regular;
+}
+
+// Icons (inside Form elements)
+@mixin icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33px;
+    width: 33px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    &:focus {
+        + * {
+            background-color: tint($darkblue, 90%);
+        }
+    }
+    svg {
+        height: 14px;
+        position: relative;
+        top: 0px;
+        transition: all .15s linear;
+    }
+}
+
+// Radio buttons and Checkboxes
+@mixin radio-and-checkbox {
+    @include form-control-span;
+    border: none;
+    width: auto;
+    float: left;
+    margin-right: 30px;
+    height: 20px;
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    &__label {
+        display: flex;
+        align-items: center;
+        &:hover {
+            .c-radio__box,
+            .c-checkbox__box {
+                background-color: tint($green, 60%);
+            }
+        }
+    }
+    &__input {
+        @include form-control-element;
+        position: absolute;
+        visibility: hidden;
+    }
+    &__box {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        background-color: $white;
+        border: 1px solid $darkblue;
+        margin-right: 4px;
+        height: 20px;
+        width: 20px;
+        min-width: 20px;
+        transition: background-color .15s linear;
+    }
+    &__text {
+        @include text-size-regular;
+        user-select: none;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        line-height: 0;
+        padding-top: 2px;
+        height: 20px;
+    }
+}
+
+// Buttons and Input-submit
+@mixin button-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: .08em;
+    padding: 0 20px;
+    width: 100%;
+    height: 35px;   
+    cursor: pointer;
+    color: $white;
+    transition: background-color .15s linear;
+    background: $green;
+    &:hover {
+        background-color: shade($green, 10%);
+    }
+    @include over($xs) {
+        width: auto;
+        float: right;
+        align-self: flex-end;
+    }
+    @include text-size-regular;
+}
+
+
+
+
+
+// BROWSER / DEVICE MIXINS - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+@mixin ie {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    }
+  }
+  
+  @mixin ie-over($min) {
+    @media all and (min-width:$min) {
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+      }
+    }
+  }
