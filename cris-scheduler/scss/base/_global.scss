@@ -5,13 +5,11 @@ body {
 
 html {
     font-size: 16px;
-    height: 100%;
 }
 
 body {
     font-family: Roboto,"Segoe UI",Segoe,Arial,Helvetica,sans-serif;
     color: $ws-primary-blue;
-    line-height: 1.5rem;
 }
 
 button,
@@ -51,4 +49,10 @@ input[type=number] {
 // Removes dropdown arrow in IE11
 select::-ms-expand {
     display: none;
+}
+
+.row,
+.col {
+    display: flex;
+    height: 100%;
 }
