@@ -8,19 +8,41 @@
 @mixin responsive-classes($mq) {
     
     // display
-    .is-display-block {display: block;}
-    .u-flex#{$mq} {display: flex;}
+    .hidden#{$mq} {display: none;}
+    .inline-block#{$mq} {display: block;}
+    .block#{$mq} {display: block;}
+    .flex#{$mq} {display: flex;}
 
-    // width
-    .width-100#{$mq} {width: 100%}
+    // width (px)
+    .width-55#{$mq} {width: 55px;}
+    .width-70#{$mq} {width: 70px;}
+    .width-100#{$mq} {width: 100px;}
+    .width-110#{$mq} {width: 110px;}
+    .width-120#{$mq} {width: 120px;}
+    .width-160#{$mq} {width: 160px;}
+
+    // width (%)
+    .width-100\%#{$mq} {width: 100%;}
+
+    // margin
+    .ml-5px#{$mq} {margin-left: 5px;}
+    .ml-8px#{$mq} {margin-left: 8px;}
+    .ml-10px#{$mq} {margin-left: 10px;}
+    .mb-5px#{$mq} {margin-bottom: 5px;}
+    .mb-10px#{$mq} {margin-bottom: 10px;}
 
     // text
-    .u-bold#{$mq} {font-weight: bold;}
-    .u-nowrap#{$mq} {white-space: nowrap;}
+    .bold#{$mq} {font-weight: bold;}
+    .nowrap#{$mq} {white-space: nowrap;}
+    .align-right#{$mq} {text-align: right;}
+    .style-normal#{$mq} {font-style: normal;}
 
     // interactive
-    .u-pointer-events-none#{$mq} {pointer-events: none;}
-    .u-pointer-events-auto#{$mq} {pointer-events: auto;}
+    .pointer-events-none#{$mq} {pointer-events: none;}
+    .pointer-events-auto#{$mq} {pointer-events: auto;}
+
+    // dynamic  
+    .drawer-active {right: 0;}
 }
 
 @include responsive-classes(null);

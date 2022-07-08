@@ -1,0 +1,13 @@
+.drawer {
+    transition: all .2s linear;
+    background-color: $ws-secondary-blue;
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    top: 50px;
+    right: -300px;
+    color: $ws-white;
+    padding: 15px;
+    border: white solid 1px;
+    z-index: 10;
+}

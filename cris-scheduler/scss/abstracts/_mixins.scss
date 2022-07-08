@@ -167,9 +167,9 @@
     border-radius: 3px;
     width: 100%;
     height: 35px;
-    transition: background-color .1s linear;
+    transition: background-color .2s linear;
     &:focus-within {
-        transition: all .15s linear;
+        transition: all .2s linear;
         box-shadow: 0 0 0 1px #578bc9;
         border-color: #578bc9;
     }
@@ -206,7 +206,7 @@
         height: 14px;
         position: relative;
         top: 0px;
-        transition: all .15s linear;
+        transition: all .2s linear;
     }
 }
 
@@ -246,7 +246,7 @@
         height: 20px;
         width: 20px;
         min-width: 20px;
-        transition: background-color .15s linear;
+        transition: background-color .2s linear;
     }
     &__text {
         @include text-size-regular;
@@ -274,7 +274,7 @@
     height: 35px;   
     cursor: pointer;
     color: $ws-white;
-    transition: background-color .15s linear;
+    transition: background-color .2s linear;
     background: $green;
     &:hover {
         background-color: shade($green, 10%);

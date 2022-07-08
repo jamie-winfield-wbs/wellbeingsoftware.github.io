@@ -4,33 +4,902 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>CRIS Scheduler</title>
-        <meta name="description" content="CRIS Scheduler Prototype">
-        <meta name="revised" content="Wednesday, June 30th, 2022, 17:43" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="revised" content="Wednesday, July 29th, 2022, 17:55">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://jamie-winfield-wbs.github.io/wellbeingsoftware.github.io/cris-scheduler/css/styles.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
     </head>
     <body>
-        <header class="app-header  row">
-            <div class="col">
-                <img class="logo" src="https://jamie-winfield-wbs.github.io/wellbeingsoftware.github.io/cris-scheduler//images/logo-cris-scheduling-white.svg" alt="Cris scheduling logo">
+        <header class="app-header">
+            <div class="branding-navbar">
+                <div class="row">
+                    <div class="col">
+                        <img class="logo" src="https://jamie-winfield-wbs.github.io/wellbeingsoftware.github.io/cris-scheduler/images/logo-cris-scheduling-white.svg" alt="Cris scheduling logo">
+                    </div>
+                    <div class="col">
+                        <p class="user">Logged in as: HSS SUPPORT USER</p>
+                    </div>
+                    <div class="col">
+                        <button class="button  button-help">
+                            <span class="span">?</span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button  button-hamburger" id="button-hamburger">
+                            <span class="span"></span>
+                            <span class="span"></span>
+                            <span class="span"></span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <h3 class="user">Logged in as: HSS SUPPORT USER</h3>
+            <div class="booking-title-bar">
+                <p class="breadcrumbs">Home&nbsp;&nbsp;>&nbsp;&nbsp;Patient Tracking List&nbsp;&nbsp;>&nbsp;&nbsp;<span class="current-page  bold">Booking Page</span></p>
             </div>
-            <div class="col">
-                <button class="button  button-help">
-                    <span class="span">?</span>
-                </button>
-            </div>
-            <div class="col">
-                <button class="button  button-hamburger">
-                    <span class="span"></span>
-                    <span class="span"></span>
-                    <span class="span"></span>
-                </button>
-            </div>
+            <div class="patient-banner"></div>
         </header>
-        <div class="booking-title-bar"></div>
-        <div class="patient-banner"></div>    
+        <main class="main-content">
+            <section class="section  section-services">
+                <h2 class="text  heading-2  mb-10px">Service</h2>
+                <table class="table  table-services">
+                    <colgroup class="table-colgroup">
+                        <col class="table-col  width-110"></col>
+                        <col class="table-col"></col>
+                    </colgroup>
+                    <tbody>
+                        <tr class="table-row">
+                            <th class="table-head">Name</th>
+                            <td class="table-data">Dr Ranjit Brown</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Requested Proceedure</th>
+                            <td class="table-data">Smith</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Current Breach Date</th>
+                            <td class="table-data">10th November 2022 13:25</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="text  heading-2  mb-10px">Service Request</h2>
+                <table class="table  table-services">
+                    <colgroup class="table-colgroup">
+                        <col class="table-col  width-110"></col>
+                        <col class="table-col"></col>
+                    </colgroup>
+                    <tbody class="table-tbody">
+                        <tr class="table-row">
+                            <th class="table-head">Referrer</th>
+                            <td class="table-data">Dr Peter Capaldi</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Referring Location</th>
+                            <td class="table-data">GP Practice</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Referal Source</th>
+                            <td class="table-data">Kevingrove Medical Centre</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Patient Type</th>
+                            <td class="table-data">GP Direct Access Patient</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Mobility</th>
+                            <td class="table-data">NHS</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Patient Category</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Pregnancy Possible</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Intended Clinician</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Practitioner</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Pathway</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">LMP Date</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">On Call</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Clinical Details</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Reason for Exam</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Clinical History</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Event Comments</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Clinical Safety</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Actions</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Actions List</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Date Created</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Date Request Made</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Request Made By</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Service Allocated</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Current Appt Date</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Ordered Date</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Received Date</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Accepted Date</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Patient's Next Appt</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Service Details</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Allocated Service</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Requested Proceedure</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Current Breach Date</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Vetting Tab</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head">Vetted By</th>
+                            <td class="table-data">No Data Entered</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="section  section-details">
+                <div class="tabbing">
+                    <div class="section-header">
+                        <div class="tabs">
+                            <div class="tab  tab-active" data-tab="1">
+                                <h2 class="text  heading-2  tab-heading">Details</h2>
+                            </div>
+                            <div class="tab" data-tab="2">
+                                <h2 class="text  heading-2  tab-heading">Actions</h2>
+                            </div>
+                            <div class="tab" data-tab="3">
+                                <h2 class="text  heading-2  tab-heading">Vetting</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="tab-panels">
+                            <div class="tab-panel  tab-panel-active" id="tab-panel-1">
+                                <h3 class="text  heading-3">Clinical Details</h3>
+                                <h4 class="text  heading-4">Reason for Examination</h4>
+                                <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                <h4 class="text  heading-4">Clinical History</h4>
+                                <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                <h4 class="text  heading-4">Clinical Safety</h4>
+                                <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                <h4 class="text  heading-4">Event Comment</h4>
+                                <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                            </div>
+                            <div class="tab-panel" id="tab-panel-2">
+                                <div classs="actions">
+                                    <table class="table">
+                                        <colgroup class="table-colgroup">
+                                            <col class="table-col  width-55"></col>
+                                            <col class="table-col  width-120"></col>
+                                            <col class="table-col  width-55"></col>
+                                            <col class="table-col"></col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr class="table-row">
+                                                <th class="table-head">Date</th>
+                                                <th class="table-head">User</th>
+                                                <th class="table-head">Action</th>
+                                                <th class="table-head">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-row">
+                                                <td class="table-data">20/09/22</td>
+                                                <td class="table-data">HSS Support user</td>
+                                                <td class="table-data">Viewed</td>
+                                                <td class="table-data">Comment made</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <td class="table-data">21/09/22</td>
+                                                <td class="table-data">HSS Support user</td>
+                                                <td class="table-data">Viewed</td>
+                                                <td class="table-data">Comment made</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <td class="table-data">22/09/22</td>
+                                                <td class="table-data">HSS Support user</td>
+                                                <td class="table-data">Viewed</td>
+                                                <td class="table-data">Comment made</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <td class="table-data">23/09/22</td>
+                                                <td class="table-data">HSS Support user</td>
+                                                <td class="table-data">Viewed</td>
+                                                <td class="table-data">Comment made</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="comments">
+                                    <h3 class="text  heading-3">Comments</h3>
+                                    <div class="comments">
+                                        <blockquote class="comment">
+                                            <p class="comment-text  text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                            <p class="comment-data  text  paragraph">
+                                                <cite class="comment-owner">HSS Support User</cite>
+                                                <time class="comment-datetime  ml-10px" datetime="14-02-2008 20:00">2008-02-14 20:00</time>
+                                            </p>
+                                        </blockquote>
+                                        <blockquote class="comment">
+                                            <p class="comment-text  text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                            <p class="comment-data  text  paragraph">
+                                                <cite class="comment-owner">HSS Support User</cite>
+                                                <time class="comment-datetime  ml-10px" datetime="13-02-2008 20:00">2008-02-14 20:00</time>
+                                            </p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="requests">
+                                    <table class="table">
+                                        <colgroup class="table-colgroup">
+                                            <col class="table-col  width-160"></col>
+                                            <col class="table-col"></col>
+                                        <tbody>
+                                            <tr class="table-row">
+                                                <th class="table-head">Request By</th>
+                                                <td class="table-data">Order comms</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <th class="table-head">Date Created</th>
+                                                <td class="table-data">30th October 2021</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <th class="table-head">Order Received</th>
+                                                <td class="table-data">Date requested</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <th class="table-head">Requested By Date</th>
+                                                <td class="table-data">6th November 2021</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <th class="table-head">Current Appointment</th>
+                                                <td class="table-data">5th November 2021</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <th class="table-head">Patients Next Clinic Appointment</th>
+                                                <td class="table-data">No Date Given</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-panel" id="tab-panel-3">
+                                <div class="vetted-data">
+                                    <table class="table">
+                                        <colgroup class="table-colgroup">
+                                            <col class="table-col  width-70"></col>
+                                            <col class="table-col"></col>
+                                        <tbody>
+                                            <tr class="table-row">
+                                                <th class="table-head">Verified By</th>
+                                                <td class="table-data">Dr Peter Jones</td>
+                                            </tr>
+                                            <tr class="table-row">
+                                                <th class="table-head">Date verified</th>
+                                                <td class="table-data">30th October 2021</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="vetted-information">
+                                    <h4 class="text  heading-4">Booking Notes</h4>
+                                    <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                    <h4 class="text  heading-4">Protocol</h4>
+                                    <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                    <h4 class="text  heading-4">Patient Condition</h4>
+                                    <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                    <h4 class="text  heading-4">Current Medication</h4>
+                                    <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                    <h4 class="text  heading-4">Resource Requirements</h4>
+                                    <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                    <h4 class="text  heading-4">Contrast</h4>
+                                    <p class="text  paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare id magna quis suscipit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section  section-availability">
+                <div class="section-header">
+                    <div class="heading-and-controls">
+                        <h2 class="text  heading-2  nowrap">Suggested Availability</h2>
+                        <div class="section-controls">
+                            <div class="button-group">
+                                <button class="button  green" title="Morning">M</button>
+                                <button class="button  green" title="Afternoon">A</button>
+                                <button class="button  green" title="Evening">E</button>
+                            </div>
+                            <div class="button-group  ml-8px">
+                                <button class="button  green" title="Closest">C</button>
+                                <button class="button  green" title="Soonest">S</button>
+                            </div>
+                            <button class="button  button-icon  green  ml-8px" title="Pick a date">
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16">
+                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                            </button>
+                            <button class="button  green  ml-8px" title="Select this week">This Week</button>
+                            <button class="button  button-icon  green  ml-8px" title="Backwards a week">
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                </svg>
+                            </button>
+                            <button class="button  button-icon  green  ml-8px" title="Forwards a week">
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dates">
+                        <div class="month-year">
+                            <span class="date">June 2022</span>
+                        </div>
+                        <div class="day-date">
+                            <span class="date">Mon 20th</span>
+                            <span class="date">Tue 21st</span>
+                            <span class="date">Wed 22nd</span>
+                            <span class="date">Thu 23rd</span>
+                            <span class="date">Fri 24th</span>
+                            <span class="date">Sat 25th</span>
+                            <span class="date">Sun 25th</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-body">
+                    <div class="facility">
+                        <h3 class="text  heading-3">Berry Hospital</h3>
+                        <div class="facility-availability-blocks">
+                            <div class="facility-availability-block"
+                                 data-tooltip="top"
+                                 data-date="Monday 20th June 2022"
+                                 data-facility="Berry Hospital"
+                                 data-session="Morning">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                                <div class="tooltip" id="tooltip">
+                                    <h4 class="text  heading-4  facility-name">Berry Hospital</h4>
+                                    <p class="text  paragraph-2 date-session">
+                                        <time class="date" datetime="">Monday 20th June 2022</time>
+                                        <span class="session">Morning</span>
+                                    </p>
+                                    <div class="scroll-box">
+                                        <ul class="list room-time-blocks">
+                                            <li class="room-time-block">
+                                                <span class="time">09:00</span>
+                                                <span class="room">Room C01</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">09:20</span>
+                                                <span class="room">Room C01</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">10:00</span>
+                                                <span class="room">Room C01</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">10:00</span>
+                                                <span class="room">Room C02</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">10:00</span>
+                                                <span class="room">Room C03</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">14:00</span>
+                                                <span class="room">Room C01</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">14:00</span>
+                                                <span class="room">Room C02</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">14:00</span>
+                                                <span class="room">Room C03</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="facility-availability-block"
+                                 data-tooltip="top"
+                                 data-date="Monday 21st June 2022"
+                                 data-facility="Berry Hospital"
+                                 data-session="Morning">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                                <div class="tooltip" id="tooltip">
+                                    <h4 class="text  heading-4  facility-name">Berry Hospital</h4>
+                                    <p class="text  paragraph-2 date-session">
+                                        <time class="date" datetime="">Monday 21st June 2022</time>
+                                        <span class="session">Morning</span>
+                                    </p>
+                                    <div class="scroll-box">
+                                        <ul class="list room-time-blocks">
+                                            <li class="room-time-block">
+                                                <span class="time">09:00</span>
+                                                <span class="room">Room C01</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">09:20</span>
+                                                <span class="room">Room C01</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">10:00</span>
+                                                <span class="room">Room C01</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">10:00</span>
+                                                <span class="room">Room C02</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">10:00</span>
+                                                <span class="room">Room C03</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">14:00</span>
+                                                <span class="room">Room C01</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">14:00</span>
+                                                <span class="room">Room C02</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                            <li class="room-time-block">
+                                                <span class="time">14:00</span>
+                                                <span class="room">Room C03</span>
+                                                <span class="duration">20m</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility">
+                        <h3 class="text  heading-3">Healthcare Hospital</h3>
+                        <div class="facility-availability-blocks">
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility">
+                        <h3 class="text  heading-3">London Hospital</h3>
+                        <div class="facility-availability-blocks">
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility">
+                        <h3 class="text  heading-3">Nottingham Hospital</h3>
+                        <div class="facility-availability-blocks">
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Morning</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Afternoon</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                            <div class="facility-availability-block">
+                                <p class="text  paragraph  session  bold">Evening</p>
+                                <p class="text  paragraph  availability-amount">8 Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="drawer">
+            <nav>
+                <ul class="links">
+                    <li class="">Page link</li>
+                    <li class="">Page link</li>
+                    <li class="">Page link</li>
+                    <li class="">Page link</li>
+                    <li class="">Page link</li>
+                </ul>
+            </nav>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="scripts/script.js"></script>
     </body>
 </html>

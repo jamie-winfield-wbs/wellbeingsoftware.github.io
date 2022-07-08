@@ -1,4 +1,11 @@
 .app-header {
+    position: fixed;
+    width: 100%;
+    height: 137px;
+    z-index: 0;
+}
+
+.branding-navbar {
     height: 50px;
     width: 100%;
     background-color: $ws-primary-blue;
@@ -9,7 +16,7 @@
         top: 0;
         right: 0;
         background-color: $ws-secondary-blue;
-        height: 100%;
+        height: inherit;
         width: 44%;
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 50px 100%);
         z-index: 0;
@@ -30,6 +37,7 @@
     .user {
         color: $ws-white;
         font-size: 1rem;
+        font-weight: 700;
         white-space: nowrap;
     }
     .button {
@@ -53,6 +61,7 @@
             color: $ws-white;
             height: 23px;
             width: 23px;
+            padding-top: 1px;
         }
     }
     .button-hamburger {
@@ -66,4 +75,27 @@
             width: 100%;
         }
     }
+}
+
+.booking-title-bar {
+    height: 21px;
+    width: 100%;
+    background-color: $ws-white;
+    position: relative;
+    .breadcrumbs {
+        padding: 4px 0px 0 20px;
+        font-size: 10px;
+        display: flex;
+        height: 21px;
+    }
+    .current-page {
+        cursor: default;
+    }
+}
+
+.patient-banner {
+    height: 66px;
+    width: 100%;
+    background-color: $ws-primary-blue;
+    position: relative;
 }

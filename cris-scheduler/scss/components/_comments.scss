@@ -1,0 +1,21 @@
+.comments {
+    display: flex;
+    flex-direction: column;;
+}
+
+.comment {
+    border-bottom: 1px dashed currentColor;
+    margin-bottom: 20px;
+}
+
+.comment-data {
+    text-align: right;
+    font-weight: bold;
+}
+
+.comment-owner {
+    font-style: normal;
+}
+
+.comment-datetime {
+}

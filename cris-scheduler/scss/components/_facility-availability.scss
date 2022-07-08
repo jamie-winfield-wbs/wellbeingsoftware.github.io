@@ -1,0 +1,28 @@
+.facility {
+    margin-top: 20px;
+    .facility-availability-blocks {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+    .facility-availability-block {
+        position: relative;
+        border-radius: 3px;
+        background-color: lighten($ws-secondary-blue, 45%);
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: background-color .2s ease-in-out;
+        &:hover {
+            background-color: lighten($ws-secondary-blue, 35%);
+        }
+    }
+    .text.paragraph {
+        margin-bottom: 0;
+        font-size: 11px;
+    }
+}
